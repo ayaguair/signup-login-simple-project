@@ -27,38 +27,50 @@ login.c
 
 ---
 
-## How to Compile and Run
+# How to Compile and Run
 
-### On Linux / macOS / WSL
+### On Linux / macOS/ WSL
 
-```bash
-gcc main.c menu.c signup.c login.c -o login
-./login
+``` gcc main.c menu.c signup.c login.c -o login ```
 
-### On Windows (Using MinGW)
+### On Windows using MinGW and gcc
 
-gcc main.c menu.c signup.c login.c -o login.exe
-login.exe
+``` gcc main.c signup.c login.c menu.c -o simple-login.exe ```
 
+# Sample Interaction
+
+Menu:
 1. Register
 2. Login
 3. Exit
+   
+Please enter your choice number: 1
+Enter username:
+user
 
-Enter your choice: 1
-Enter a new username: user1
-Enter your password: pass123
-Confirm your password: pass123
-Registration successful
+Enter your password: 1234
+Confirm your password: 1234
+Registration successful! Welcome, user.
 
-Enter your choice: 2
-Enter your username: user1
-Enter your password: pass123
+Menu:
+1. Register
+2. Login
+3. Exit
+   
+Please enter your choice number: 2
+Enter username:
+user
+
+Enter password:
+1234
+
 Login successful!
-Welcome.
+Welcome, user!
 
 Press Enter to exit...
-####################################################
-What I Learned
+
+# What I learned
+
 Handling file input/output in C
 
 Comparing strings and validating input
@@ -68,3 +80,4 @@ Preventing duplicate user entries
 Writing modular C programs with multiple source files
 
 Building portable, cross-platform C applications
+
